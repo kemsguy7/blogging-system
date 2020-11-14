@@ -1,6 +1,10 @@
 <?php 
 //This script is responsible for showing success or failure alerts
-session_start();
+//if the session has been started already, ignore
+    if (session_status() == PHP_SESSION_NONE){ 
+            session_start();
+        }
+
 function ErrorMessage() {
     if(isset($_SESSION["ErrorMessage"])) {
         $Output = "<div class=\"alert alert-danger\">";

@@ -8,8 +8,7 @@
 
 body {
     margin-top: 100px;
-    /*background-color: #222;*/
-    background-color: aliceblue;
+    background-color: #222;
 }
 
 @media(min-width:768px) {
@@ -25,7 +24,7 @@ body {
 #page-wrapper {
     width: 100%;
     padding: 0;
-    background-color: #222;
+    background-color: #fff;
 }
 
 .huge {
@@ -123,7 +122,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: rgb(167, 150, 150);
+        background-color: #222;
     }
 
     .side-nav>li>a {

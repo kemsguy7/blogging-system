@@ -1,13 +1,17 @@
 <?php ob_start(); ?>
-<?php session_start(); ?>
+<?php session_start(); 
+//if the session has been started already, ignore
+    if (session_status() == PHP_SESSION_NONE){ 
+            session_start();
+        }
+?>
 <?php include "db.php"; ?>
 <?php include "functions.php"; ?> 
 <?php include "misc.php";?>
 
 <?php
  //if the admin is set, log in the user else, take the user back to the admin login page
-(isset($_SESSION['userLoggedIn'])) ? $user = $_SESSION['userLoggedIn'] : 
-header("Location: ../cms-admin.php");
+(isset($_SESSION['userLoggedIn'])) ? $user = $_SESSION['userLoggedIn'] : header("Location: ../cms-admin.php");
 
 
 $sql = mysqli_query($connection, "SELECT * FROM users WHERE email='$user'");

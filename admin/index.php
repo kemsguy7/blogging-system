@@ -1,9 +1,4 @@
-<?php 
-//if the session has been started already, ignore
-if (session_status() == PHP_SESSION_NONE){ 
-        session_start();
-    }
-?>
+
 <?php include 'includes/header.php';?>
 
     <div id="wrapper">
